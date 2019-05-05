@@ -1,0 +1,8 @@
+{
+  "name": "node-logger",
+  "author": "BagrijRoman",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.14.0"
+  }
+}
