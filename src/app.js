@@ -1,6 +1,11 @@
 const express = require('express');
-const app = express();
+const { httpLogger } = require('./middlewares');
+const { logger } = require('./utils');
+
 const PORT = 3005;
+const app = express();
+
+app.use(httpLogger);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -15,5 +20,5 @@ app.get('/user', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+  logger.info(`Server listening on port ${PORT}`);
 });
